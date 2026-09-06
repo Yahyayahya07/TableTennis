@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dmk7lrp2wnn5n"]
+
+[ext_resource type="Script" uid="uid://vovjlr6spfnw" path="res://scenes/options_screen.gd" id="1_48gn0"]
+
+[node name="Node2D" type="Node2D" unique_id=1664002893]
+script = ExtResource("1_48gn0")
+
+[node name="TextEdit" type="TextEdit" parent="." unique_id=801859046]
+offset_right = 474.0
+offset_bottom = 163.0
+text = "Use A and D to tilt racket and change spin direction.
+Use left click to move in z axis
+use W to flatten racket
+use right click to smack the ball faster.
+press middle click to reset racket
+press escape on game to return to main screen"
+scroll_vertical = 0.2592592592592595
+
+[node name="Control" type="Control" parent="." unique_id=1980716047]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="Control" unique_id=570205277]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 200.0
+offset_right = 112.0
+offset_bottom = 253.0
+text = "back"
+
+[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]

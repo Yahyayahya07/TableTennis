@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://8r7v3luseblt"]
+
+[ext_resource type="Script" uid="uid://wq2lntnl5pu0" path="res://scripts/ball.gd" id="1_x8fbi"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_af1sv"]
+bounce = 0.85
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_yedro"]
+margin = 0.08
+radius = 0.04
+
+[sub_resource type="SphereMesh" id="SphereMesh_yedro"]
+radius = 0.04
+height = 0.08
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i8tb7"]
+albedo_color = Color(0.85544163, 0.8481373, 0.7379597, 1)
+roughness = 0.5
+roughness_texture_channel = 4
+
+[node name="ball" type="RigidBody3D" unique_id=2095799546]
+mass = 0.027
+physics_material_override = SubResource("PhysicsMaterial_af1sv")
+contact_monitor = true
+max_contacts_reported = 4
+script = ExtResource("1_x8fbi")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1761013281]
+shape = SubResource("SphereShape3D_yedro")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=601249140]
+mesh = SubResource("SphereMesh_yedro")
+surface_material_override/0 = SubResource("StandardMaterial3D_i8tb7")
+
+[connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]

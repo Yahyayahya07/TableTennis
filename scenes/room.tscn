@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dgmeudbyyfi6d"]
+
+[ext_resource type="PackedScene" uid="uid://cpanvpio32ppn" path="res://assets/room/Empty_Room.fbx" id="1_36trf"]
+
+[node name="room" type="Node3D" unique_id=1740396469]
+
+[node name="Empty_Room" parent="." unique_id=1672133633 instance=ExtResource("1_36trf")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 362.2464, -77.57001, -265.792)

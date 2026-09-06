@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://ck2jjak44rxog"]
+
+[ext_resource type="Script" uid="uid://b5c8drdk82psa" path="res://scripts/camhandler.gd" id="1_a202f"]
+
+[node name="Node3D" type="Node3D" unique_id=650105191]
+script = ExtResource("1_a202f")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=122622870]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.52219903, 1.396491)
+current = true
