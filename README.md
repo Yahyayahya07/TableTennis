@@ -72,6 +72,16 @@ Gameplay tuning: refine aiming assistance, spin strength, and bot behaviour.
 
 The scoring system uses a simplified rule rather than full table tennis rules. Scoring and topspin are still being tested and refined.
 
+
+CREDITS.
+Professional Table Tennis free low-poly 3d model - archmark25
+Table tennis pad - ErgoNumb
+
+useful tutorials
+Godot 4 Main Menu - Robottobani
+How to do collision Detection - Bleh
+Create Your First 3D Game - GodotAcademy
+
 Built with
 
 Godot 4
