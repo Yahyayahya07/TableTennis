@@ -1,0 +1,50 @@
+Why I made this
+
+I wanted to try making a game while learning a new engine and language from scratch. I started with no experience in Godot or GDScript and originally planned to work through it without AI.
+
+I ended up using an LLM for debugging and to help write parts of the ball movement, spin, and bots deterministic AI.
+
+
+
+What I picked up
+
+I got familiar with Godot’s node system, including meshes, collision nodes, and textures. I also learned how to use GDScript to control movement, rotation, and physics, work with signals, detect collisions, and map buttons to actions.
+
+One thing I’d do differently next time is spend more time getting comfortable with the language before jumping into a bigger project.
+
+
+
+
+Known issues
+
+Rotating the racket around the X and Z axes at the same time can make it behave unexpectedly. I added a middle mouse button reset so you can recover when this happens, but the rotation itself still needs fixing.
+
+
+
+
+Development notes
+Changing the project’s scope
+
+I initially tried importing a character, but ended up switching to a paddle-based game. That shifted the focus toward controlling the racket, getting the ball moving, and building a playable rally.
+
+Local versus global rotation
+
+Getting the racket to rotate how I expected took some trial and error. Once the racket was tilted, swinging around a global axis wasn’t the same as swinging around its own X axis. Working through this helped me understand the difference between local and global rotation.
+
+Limiting racket rotation
+
+I saved the racket’s starting rotation so I could use it as a reference. From there, I worked on clamping how far it could turn and returning it to its resting angle when I released the button.
+
+This gave me more control over its movement, although rotating around X and Z together still needs fixing.
+
+Making rallies playable
+
+I wanted shots to head toward the table more consistently so rallies would be easier to keep going. With AI assistance, I added a calculation that sends the ball through an arc toward a landing point on the opposite side.
+
+The racket’s position shifts the target across the table, while its tilt adds sideways spin. The shot calculation also compensates for that sideways curve to help the ball reach the target.
+
+Holding the ball before the first hit
+
+I wanted the ball to stay in place before a rally started, so I set its gravity to zero and enabled it after the first racket hit.
+
+When the ball resets, its velocity and spin are cleared and gravity is switched off again, ready for the next rally.
